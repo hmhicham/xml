@@ -113,26 +113,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $villesDom->getElementsByTagName('recherche')->item(0)->appendChild($existingCountry);
     }
 
-    // Create the city element
-    $villeElement = $villesDom->createElement('ville');
-    $villeElement->setAttribute('nom', $city_name);
+// Create the city element
+$villeElement = $villesDom->createElement('ville');
+$villeElement->setAttribute('nom', $city_name);
 
-    // Add sites for search
-    $sitesElement = $villesDom->createElement('sites');
-    foreach ($sites as $site) {
-        $siteElement = $villesDom->createElement('site');
-        $siteElement->setAttribute('nom', $site);
-        $sitesElement->appendChild($siteElement);
+// Add sites for search
+$sitesElement = $villesDom->createElement('sites');
+foreach ($sites as $index => $site) {
+    $siteElement = $villesDom->createElement('site');
+    $siteElement->setAttribute('nom', $site);
+    if (isset($_FILES['site_photos']['name'][$index]) && $_FILES['site_photos']['error'][$index] == 0) {
+        $photoName = $_FILES['site_photos']['name'][$index];
+        $uploadDir = 'images/'; // directory where photos will be uploaded
+        $uploadPath = $uploadDir. $photoName;
+        move_uploaded_file($_FILES['site_photos']['tmp_name'][$index], $uploadPath);
+        $siteElement->setAttribute('photo', $uploadPath);
     }
-    $villeElement->appendChild($sitesElement);
+    $sitesElement->appendChild($siteElement);
+}
+$villeElement->appendChild($sitesElement);
+// Check if villes element already exists in the country
+$villesElement = $existingCountry->getElementsByTagName('villes')->item(0);
+if (!$villesElement) {
+    // If villes element does not exist, create it
+    $villesElement = $villesDom->createElement('villes');
+    $existingCountry->appendChild($villesElement);
+}
 
-    // Append the city to the existing country
-    $existingCountry->appendChild($villeElement);
+// Append the city to the villes element
+$villesElement->appendChild($villeElement);
 
-    // Save the updated Villes.xml in the xml directory
-    $villesDom->save($villesFile);
+// Save the updated Villes.xml in the xml directory
+$villesDom->save($villesFile);
 
-    // Redirect or display success message
-    echo "Ville ajoutée avec succès!";
+// Redirect or display success message
+echo "Ville ajoutée avec succès!";
 }
 ?>
