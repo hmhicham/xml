@@ -18,7 +18,7 @@
                     <site nom="Bastion 23" photo="sidi_el_houari.jpg"/>
                 </sites>
             </ville>
-        </villes>
+        <ville nom="finale"><sites><site nom="s1" photo="images/Capture d’écran (1).png"/></sites></ville></villes>
       </pays>
     <pays no="C2" nom="Grande Bretagne">
         <villes>
@@ -32,14 +32,29 @@
     </pays>
 
 
-<pays nom="oran">
-<villes>
-<ville nom="tbessa">
-<sites>
-<site nom="s1"/>
-<site nom="s2"/>
-</sites>
-</ville>
-</villes>
+<pays nom="syria">
+    <villes>
+        <ville nom="hama">
+            <sites>
+                <site nom="nawair"/>
+                <site nom="nawa"/>
+            </sites>
+        </ville>
+        <ville nom="homs">
+            <sites>
+                <site nom="nawair"/>
+            </sites>
+        </ville>
+        <ville nom="homs">
+            <sites>
+                <site nom="nawair" photo="images/djalal.PNG"/>
+            </sites>
+        </ville>
+        <ville nom="homs">
+            <sites>
+                <site nom="nawair"/>
+            </sites>
+        </ville>
+    <ville nom="homs"><sites><site nom="nawair"/></sites></ville><ville nom="homss"><sites><site nom="nawair"/></sites></ville><ville nom="homss"><sites><site nom="nawair" photo="images/Hama.jpg"/></sites></ville></villes>
 </pays>
 </recherche>
