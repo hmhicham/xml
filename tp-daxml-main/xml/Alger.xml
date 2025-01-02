@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ville nom="alger">
+  <descriptif>jkhj</descriptif>
+  <sites>
+    <site nom="s1">
+      <photo>Capture d’écran (1).png</photo>
+    </site>
+  </sites>
+  <hotels>
+    <hotel>h1</hotel>
+  </hotels>
+  <restaurants>
+    <restaurant/>
+  </restaurants>
+  <gares>
+    <gare/>
+  </gares>
+  <aeroports>
+    <aeroport/>
+  </aeroports>
+</ville>
