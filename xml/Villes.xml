@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recherche>
+  <continents>
+    <continent no="C1" nom="Afrique"/>
+    <continent no="C2" nom="Europe"/>
+  </continents>
+  <pays no="C1" nom="Algérie">
+    <villes><ville nom="baba hassen"><sites><site nom="cdta" photo="images/Capture2.PNG"/></sites></ville></villes>
+  </pays>
+  <pays no="C2" nom="Grande Bretagne">
+    <villes>
+      <ville nom="Londres">
+        <sites>
+          <site nom="Big Ben" photo="big_ben.jpg"/>
+          <site nom="Tower Bridge" photo="tower_bridge.jpg"/>
+        </sites>
+      </ville>
+    </villes>
+  </pays>
+  <pays nom="syria">
+    <villes>
+      <ville nom="hama">
+        <sites>
+          <site nom="nawair"/>
+          <site nom="nawa"/>
+        </sites>
+      </ville>
+      <ville nom="homs">
+        <sites><site nom="nawair" photo="images/djaljkfddal.PNG"/><site nom="tset"/></sites>
+      </ville>
+      <ville nom="homs">
+        <sites>
+          <site nom="nawair"/>
+        </sites>
+      </ville>
+      <ville nom="homs">
+        <sites>
+          <site nom="nawair"/>
+        </sites>
+      </ville>
+    </villes>
+  </pays>
+</recherche>
